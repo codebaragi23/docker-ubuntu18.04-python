@@ -29,5 +29,6 @@ RUN apt-get install -y \
     python3-numpy \
     && rm -rf /var/lib/apt/lists/*
 
-RUN ln -s /usr/bin/python3.6 /usr/bin/python \
- && ln -s /usr/bin/python3.6-config /usr/bin/python-config
+RUN cd /usr/bin \
+    && ln -s python3.6 python \
+    && ln -s python3.6-config python-config

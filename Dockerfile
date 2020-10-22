@@ -32,3 +32,5 @@ RUN apt-get install -y \
 RUN cd /usr/bin \
     && ln -s python3.6 python \
     && ln -s python3.6-config python-config
+
+RUN python3 -m pip install --upgrade pip
